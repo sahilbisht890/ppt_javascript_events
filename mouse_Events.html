@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouse Events Demo</title>
+<style>
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+        line-height: 200px;
+    }
+</style>
+</head>
+<body>
+
+<div class="box" id="myBox">
+    Click Me
+</div>
+
+<script>
+    const box = document.getElementById('myBox');
+
+    // Click Event
+    box.addEventListener('click', function() {
+        box.style.backgroundColor = 'lightgreen';
+        box.textContent = 'Clicked!';
+    });
+
+    // Context Menu Event
+    box.addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+        box.style.backgroundColor = 'lightcoral';
+        box.textContent = 'Right Clicked!';
+    });
+
+    // Mouse Over Event
+    box.addEventListener('mouseover', function() {
+        box.style.backgroundColor = 'lightyellow';
+        box.textContent = 'Mouse Over!';
+    });
+
+    // Mouse Out Event
+    box.addEventListener('mouseout', function() {
+        box.style.backgroundColor = 'lightblue';
+        box.textContent = 'Mouse Out!';
+    });
+
+    // Mouse Down Event
+    box.addEventListener('mousedown', function() {
+        box.style.backgroundColor = 'lightsalmon';
+        box.textContent = 'Mouse Down!';
+    });
+
+    // Mouse Up Event
+    box.addEventListener('mouseup', function() {
+        box.style.backgroundColor = 'lightcyan';
+        box.textContent = 'Mouse Up!';
+    });
+
+    // Mouse Move Event
+    box.addEventListener('mousemove', function() {
+        box.style.backgroundColor = 'lightgray';
+        box.textContent = 'Mouse Move!';
+    });
+</script>
+
+</body>
+</html>
